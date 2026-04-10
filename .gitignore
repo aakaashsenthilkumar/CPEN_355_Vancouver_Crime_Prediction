@@ -1,0 +1,42 @@
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+
+# Data (too large for git)
+data/
+*.csv
+*.geojson
+*.pdf
+
+# Generated outputs
+outputs/
+*.png
+
+# Trained model files (regenerate with crime_pipeline.py)
+model/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+
+# Word docs (submit separately)
+report/
+
+# Build scripts
+build_report.py
