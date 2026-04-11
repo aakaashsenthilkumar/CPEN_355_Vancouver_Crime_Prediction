@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### 2. Add the dataset
 Download the VPD crime dataset (All Neighbourhoods, All Years) from:
-> https://geodash.vpd.ca/opendata/
+> https://www.kaggle.com/datasets/tcashion/vancouver-bc-crime-dataset/data?select=crimedata_csv_AllNeighbourhoods_AllYears.csv
 
 Place the CSV file at:
 ```
@@ -244,8 +244,8 @@ The chatbot uses a two-layer design to avoid hallucination:
 ---
 
 ## Data Source
-Vancouver Police Department Open Data — Crime Incidents
-https://geodash.vpd.ca/opendata/
+Vancouver Police Department Crime Data — sourced via Kaggle
+https://www.kaggle.com/datasets/tcashion/vancouver-bc-crime-dataset/data?select=crimedata_csv_AllNeighbourhoods_AllYears.csv
 
 The dataset contains individual crime incident records with fields including crime type, date, time, block address, and neighbourhood. Only `TYPE`, `YEAR`, and `NEIGHBOURHOOD` are used in this project.
 
