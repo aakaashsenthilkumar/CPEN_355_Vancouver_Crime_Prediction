@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import joblib
 import os
+from pathlib import Path
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
@@ -11,8 +12,9 @@ from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import LabelEncoder
 
 # ── 1. LOAD DATA ─────────────────────────────────────────────
+_ROOT = Path(__file__).resolve().parent
 df = pd.read_csv(
-    r"data\crimedata_csv_AllNeighbourhoods_AllYears.csv",
+    _ROOT / "data" / "crimedata_csv_AllNeighbourhoods_AllYears.csv",
     usecols=["TYPE", "YEAR", "NEIGHBOURHOOD"]
 )
 
