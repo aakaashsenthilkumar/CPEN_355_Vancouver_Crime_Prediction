@@ -1,10 +1,14 @@
 import re
 import json
+import os
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import LabelEncoder
 import ollama
+
+BASE_DIR  = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "crimedata_csv_AllNeighbourhoods_AllYears.csv")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. DATA ENGINE
@@ -12,7 +16,7 @@ import ollama
 print("Loading data and training model...")
 
 df = pd.read_csv(
-    r"archive\crimedata_csv_AllNeighbourhoods_AllYears.csv",
+    DATA_PATH,
     usecols=["TYPE", "YEAR", "NEIGHBOURHOOD"]
 )
 df.dropna(subset=["NEIGHBOURHOOD"], inplace=True)
